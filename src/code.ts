@@ -56,7 +56,7 @@ class ShoppingClient_ extends Client_ {
     const url = buildUrl_(this.BASE_URL + "/V1/itemLookup", optionParam);
     return this.do_(url, this.REQUEST_OPTION_);
   }
-  queryRankingg(optionParam: Object): Object {
+  queryRanking(optionParam: Object): Object {
     if (optionParam === undefined)
       throw new Error(`The 'optionParam' argument does not exist`);
     if (!isValidJson_(optionParam)) throw new Error(`Invalid argument`);
@@ -255,7 +255,7 @@ class TextAnalyzerClient_ extends Client_ {
   }
   // This API supports only xml response
   /*
-  jpMAparse(optionParam: Object): Object {
+  maParse(optionParam: Object): Object {
     if (optionParam === undefined)
     throw new Error(`The 'optionParam' argument does not exist`);
     if (!isValidJson_(optionParam)) throw new Error(`Invalid argument`);
@@ -396,7 +396,7 @@ function newMapClient(appId: string) {
   return new MapClient_(appId);
 }
 
-function newTextAnalyerClient(appId: string) {
+function newTextAnalyzerClient(appId: string) {
   return new TextAnalyzerClient_(appId);
 }
 
